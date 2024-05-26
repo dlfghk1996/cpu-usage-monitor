@@ -1,0 +1,16 @@
+server:
+  port: 8089
+
+spring:
+  profiles:
+    active: dev
+
+# 메트릭 엔드포인트 노출
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: metrics
+

@@ -1,0 +1,30 @@
+# Database Settings
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/terra
+    username: root
+    password:
+    driverClassName: org.mariadb.jdbc.Driver
+
+
+  # JPA Settings
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        dialect.storage_engine: innodb
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Seoul
+
+  logging:
+    level:
+      org:
+        springframework.web: debug
+
+
